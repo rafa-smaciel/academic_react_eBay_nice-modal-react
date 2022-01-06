@@ -1,7 +1,7 @@
 <h1 align="center">
   <img alt="" title="ReactJS_App" src=".github/demostration_aplication_0.gif" width="320px" />
   <br>
- CRUD with React with eBay nice-modal-react
+ CRUD with React eBay nice-modal-react
 </h1>
 
 <h3 align="justify">
