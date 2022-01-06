@@ -33,6 +33,7 @@ This project was developed with the following technologies:
 
 ## ⚙ Sources
 - pt-br.reactjs.org
+- [LogRocket](https://blog.logrocket.com/improve-modal-management-react-nice-modal-react/)
 
 <br>
 
