@@ -1,0 +1,38 @@
+.background {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: grid;
+    place-items: center;
+    background-color: rgba(0, 0, 0, 0.7); /*Definimos o fundo modal para preencher toda a janela de visualização, usamos uma cor de fundo preta com opacidade 0,7 e centralizamos o elemento filho, que será o wrapper modal.*/
+  }
+  
+  .modal {
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: white;
+    word-break: break-all; /*Para o modal atual, definimos preenchimento, largura específica, raio da borda, centralizamos o texto, definimos a cor de fundo como branco, bem como adicionamos uma quebra de palavra para dividir as palavras que excedem a largura do invólucro.*/
+  }
+  
+  .subtitle {
+    margin-bottom: 20px; /*Definimos uma margem abaixo do subtítulo para separá-lo das áreas de entrada e ação.*/
+  }
+  
+  .input {
+    width: 100%;
+    height: 25px;
+    border: 1px solid silver;
+    border-radius: 5px;
+    padding: 0px 10px; /*A entrada usará toda a largura disponível, terá uma altura específica, uma borda com cantos arredondados e algum preenchimento nos lados esquerdo e direito.*/
+  }
+  
+  .actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px; /*A área de ações conterá alguns componentes de Botão para a funcionalidade de edição e exclusão e é configurada para dividir a largura disponível em duas colunas, alguma lacuna entre e margem no topo.*/
+  }

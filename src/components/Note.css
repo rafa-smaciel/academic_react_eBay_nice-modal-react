@@ -1,0 +1,17 @@
+.note {
+    display: grid;
+    grid-template-columns: auto 70px 70px;
+    gap: 20px;
+    margin: 20px auto;
+    text-align: left;
+    word-break: break-all;
+    color: black;
+  }
+  /*Definimos a nota para usar um layout de três colunas com um intervalo de 20px entre eles, enquanto os botões de edição e exclusão usariam a largura fixa e o resto da largura disponível seria para o título da nota. Também definimos a margem para o topo, centralizamos o texto para ser posicionado à esquerda e adicionamos uma quebra de palavra para que as palavras mais longas fossem divididas automaticamente.*/
+  
+  @media screen and (max-width: 400px) {
+    .note {
+      grid-template-columns: 1fr;
+    }
+  }
+  /*Também criamos algumas regras de mídia para capacidade de resposta. Para larguras de tela de 400px e menores, a nota mudará para o layout de uma coluna, o que significa que todos os elementos incluídos (título, botão de edição e botão de exclusão) serão mostrados diretamente abaixo uns dos outros.*/

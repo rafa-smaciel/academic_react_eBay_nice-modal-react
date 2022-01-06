@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  margin: 50;
+  padding: 50;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  color: black;
+} 
+/*Primeiro, declaramos algumas regras de redefinição para margin, padding e border-box, de forma que todos os elementos sejam exibidos igualmente em todos os navegadores. Também verificamos se o aplicativo usa a fonte Montserrat.*/
+
+body {
+  padding: 20px;
+}
+/*Em seguida, adicionamos um pouco de preenchimento ao corpo, definimos o wrapper do aplicativo para nunca exceder 500px, centralizamos na janela de visualização e centralizamos o texto dentro dele.*/
+.App {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
