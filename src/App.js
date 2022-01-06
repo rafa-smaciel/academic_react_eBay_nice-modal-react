@@ -1,15 +1,19 @@
-import { useState } from "react"; //Primeiro, importamos o gancho useState para rastrear o objeto de notas assim que o atualizamos ao usar o aplicativo. Também importamos o componente NiceModal e todos os componentes individuais que criamos na fase anterior.
+import { useState } from "react"; 
+//Primeiro, importamos o gancho useState para rastrear o objeto de notas assim que o atualizamos ao usar o aplicativo. Também importamos o componente NiceModal e todos os componentes individuais que criamos na fase anterior.
+
 import NiceModal from "@ebay/nice-modal-react";
 import Modal from "./components/Modal";
 import Note from "./components/Note";
 import Button from "./components/Button";
-import "./styles.css"; // Para estilizar o componente, usaremos uma folha de estilo externa que criamos.
+import "./styles.css"; 
+// Para estilizar o componente, usaremos uma folha de estilo externa que criamos.
 
 const noteList = [
-  "My awesome third note>>>>>>>>>>>>>>>>>>>>>>>>>>>",
+  "My awesome third note",
   "My awesome second note",
   "My awesome first note"
-]; //Em seguida, criamos um array noteList que conterá as notas de amostra para o aplicativo. 
+]; 
+//Em seguida, criamos um array noteList que conterá as notas de amostra para o aplicativo. 
 
 const getNoteIndex = (e) =>
   Array.from(e.target.parentElement.parentNode.children).indexOf(
@@ -18,7 +22,8 @@ const getNoteIndex = (e) =>
 //Também criamos a função getNoteIndex para que possamos identificar o índice da nota específica em que o usuário clica na lista.
 
 export default function App() {
-  const [notes, setNotes] = useState(noteList); //Dentro da função App, primeiro definimos a lista de notas de amostra para a variável de notas. //Em seguida, criamos três funções diferentes para lidar com os cliques dos botões adicionar, editar e excluir.
+  const [notes, setNotes] = useState(noteList); 
+  //Dentro da função App, primeiro definimos a lista de notas de amostra para a variável de notas. //Em seguida, criamos três funções diferentes para lidar com os cliques dos botões adicionar, editar e excluir.
 
   const showAddModal = () => {
     NiceModal.show(Modal, {
@@ -29,7 +34,8 @@ export default function App() {
     }).then((note) => {
       setNotes([note, ...notes]);
     });
-  }; //Cada função abre o modal e passa nos adereços necessários que definimos no componente Modal. Depois que o botão salvar ou excluir é pressionado, a lista de notas é atualizada de acordo.
+  }; 
+  //Cada função abre o modal e passa nos adereços necessários que definimos no componente Modal. Depois que o botão salvar ou excluir é pressionado, a lista de notas é atualizada de acordo.
 
   const showEditModal = (e) => {
     NiceModal.show(Modal, {
@@ -43,7 +49,8 @@ export default function App() {
       notesArr[getNoteIndex(e)] = note;
       setNotes(notesArr);
     });
-  }; //Cada função abre o modal e passa nos adereços necessários que definimos no componente Modal. Depois que o botão salvar ou excluir é pressionado, a lista de notas é atualizada de acordo.
+  }; 
+  //Cada função abre o modal e passa nos adereços necessários que definimos no componente Modal. Depois que o botão salvar ou excluir é pressionado, a lista de notas é atualizada de acordo.
 
   const showDeleteModal = (e) => {
     NiceModal.show(Modal, {
@@ -57,7 +64,8 @@ export default function App() {
       notesArr.splice(getNoteIndex(e), 1);
       setNotes(notesArr);
     });
-  }; //Cada função abre o modal e passa nos adereços necessários que definimos no componente Modal. Depois que o botão salvar ou excluir é pressionado, a lista de notas é atualizada de acordo.
+  }; 
+  //Cada função abre o modal e passa nos adereços necessários que definimos no componente Modal. Depois que o botão salvar ou excluir é pressionado, a lista de notas é atualizada de acordo.
 
 
   //Por fim, renderizamos o título e o subtítulo do aplicativo, adicionamos o botão Adicionar com os adereços necessários e percorremos a variável de notas para exibir todas as notas.
@@ -67,7 +75,7 @@ export default function App() {
       <p style={{ marginBottom: "20px" }}>Using nice-modal-react</p>
       <Button
         name="Add"
-        backgroundColor="lime green"
+        backgroundColor="limegreen"
         onClick={() => {
           showAddModal();
         }}
@@ -77,7 +85,7 @@ export default function App() {
           return (
             <Note
               key={index}
-              note={note}
+              title={note}
               onClickEdit={showEditModal}
               onClickDelete={showDeleteModal}
             />
